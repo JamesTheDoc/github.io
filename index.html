@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Santiago Chonate | Home</title>
 
   <style>
@@ -21,12 +21,12 @@
       position: relative;
     }
 
-    /* capa blanca para que se vea profesional */
+    /* 🔥 AQUÍ ESTÁ EL CAMBIO (menos blanco) */
     body::before {
       content: "";
       position: fixed;
       inset: 0;
-      background: rgba(255,255,255,0.88);
+      background: rgba(255,255,255,0.55);
       z-index: -1;
     }
 
@@ -73,17 +73,45 @@
     }
 
     .hero h1 {
-      font-size: 68px;
+      font-size: 64px;
       margin-bottom: 20px;
       line-height: 1.1;
       color: #111;
-      animation: fadeInOut 3s infinite;
     }
 
-    .hero p {
-      font-size: 24px;
-      color: #333;
-      margin-bottom: 16px;
+    .hero-info {
+      max-width: 780px;
+      margin: 30px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      text-align: left;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: rgba(255,255,255,0.75);
+      padding: 14px 18px;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    .icon {
+      font-size: 26px;
+    }
+
+    .info-title {
+      font-size: 19px;
+      font-weight: bold;
+      color: #111;
+      margin-bottom: 4px;
+    }
+
+    .info-text {
+      font-size: 15px;
+      color: #444;
     }
 
     .btn {
@@ -102,20 +130,9 @@
       color: white;
     }
 
-    /* animación suave */
-    @keyframes fadeInOut {
-      0% { opacity: 1; }
-      50% { opacity: 0.5; }
-      100% { opacity: 1; }
-    }
-
     @media (max-width: 768px) {
       .hero h1 {
-        font-size: 42px;
-      }
-
-      .hero p {
-        font-size: 18px;
+        font-size: 38px;
       }
     }
   </style>
@@ -137,10 +154,30 @@
 
   <section class="hero">
     <div class="hero-box">
-      <h1>Hola, Soy<br>Santiago Chonate</h1>
-      <p>Bachiller en Administración de Empresas y Negocios Internacionales</p>
-      <p>Computación e Informática</p>
+      <h1>Hola, soy<br>Santiago Chonate</h1>
+
+      <div class="hero-info">
+
+        <div class="info-item">
+          <span class="icon">🎓</span>
+          <div>
+            <p class="info-title">Administración de Empresas y Negocios Internacionales</p>
+            <p class="info-text">Estudiante del último año — Universidad Peruana Unión</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="icon">💻</span>
+          <div>
+            <p class="info-title">Computación e Informática</p>
+            <p class="info-text">Carrera culminada — (pon aquí tu instituto)</p>
+          </div>
+        </div>
+
+      </div>
+
       <a class="btn" href="contact.html">@ Contact</a>
+
     </div>
   </section>
 
