@@ -4,25 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Santiago Chonate | Contact</title>
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
     }
 
     body {
       font-family: "Courier New", monospace;
-      background: #f3f3f3;
       color: #111;
-      line-height: 1.8;
+      min-height: 100vh;
+      background: url("fondo.png") no-repeat center center/cover;
+      position: relative;
+    }
+
+    /* capa suave */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(255,255,255,0.55);
+      z-index: -1;
     }
 
     nav {
       width: 100%;
       border-top: 8px solid #111;
-      background: #f3f3f3;
+      background: transparent;
     }
 
     .nav-container {
@@ -51,13 +61,13 @@
     .section {
       max-width: 1100px;
       margin: auto;
-      padding: 20px 20px 50px;
+      padding: 40px 20px 60px;
     }
 
     .title {
       text-align: center;
-      font-size: 32px;
-      margin-bottom: 45px;
+      font-size: 30px;
+      margin-bottom: 30px;
       font-weight: bold;
     }
 
@@ -74,15 +84,17 @@
       gap: 26px;
     }
 
+    /* 🔥 CAJAS PRO */
     .box {
-      background: white;
-      border: 1px solid #111;
-      padding: 18px;
+      background: #e6f0ff;
+      border-left: 4px solid #0b57d0;
+      padding: 16px 18px;
       margin-bottom: 14px;
+      font-size: 14px;
     }
 
     .box.large {
-      min-height: 120px;
+      min-height: 110px;
     }
 
     .btn {
@@ -103,14 +115,14 @@
     }
 
     .info h3 {
-      font-size: 30px;
+      font-size: 22px;
       margin-bottom: 14px;
     }
 
     .info p {
       margin-bottom: 10px;
-      color: #444;
-      font-size: 15px;
+      color: #333;
+      font-size: 14px;
     }
 
     @media (max-width: 900px) {
@@ -120,6 +132,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <nav>
@@ -138,6 +151,7 @@
     <h1 class="title"><span>@ Contact</span></h1>
 
     <div class="contact-grid">
+      
       <div>
         <div class="box">Nombre completo: Santiago Chonate Gamero</div>
         <div class="box">Correo: santiagochonate@upeu.edu.pe</div>
@@ -151,6 +165,7 @@
         <p>✉️ santiagochonate@upeu.edu.pe</p>
         <p>📍 Perú</p>
       </div>
+
     </div>
   </section>
 
