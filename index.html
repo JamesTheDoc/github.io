@@ -2,15 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Santiago Chonate | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santiago Chonate | Contact</title>
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
     }
 
     body {
@@ -21,6 +20,7 @@
       position: relative;
     }
 
+    /* capa suave */
     body::before {
       content: "";
       position: fixed;
@@ -58,73 +58,55 @@
       color: #111;
     }
 
-    .hero {
-      min-height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px 60px;
+    }
+
+    .title {
       text-align: center;
-      padding: 40px 20px;
-    }
-
-    .hero-box {
-      max-width: 900px;
-    }
-
-    .hero h1 {
-      font-size: 64px;
-      margin-bottom: 20px;
-      line-height: 1.1;
-      color: #111;
-    }
-
-    .hero-info {
-      max-width: 780px;
-      margin: 30px auto;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      text-align: left;
-    }
-
-    .info-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      background: rgba(255,255,255,0.75);
-      padding: 14px 18px;
-      border: 1px solid rgba(0,0,0,0.1);
-      border-radius: 10px;
-    }
-
-    /* ICONOS */
-    .icon {
-      width: 30px;
-      height: 30px;
-      flex-shrink: 0;
-    }
-
-    .info-title {
-      font-size: 19px;
+      font-size: 30px;
+      margin-bottom: 30px;
       font-weight: bold;
-      color: #111;
-      margin-bottom: 4px;
     }
 
-    .info-text {
-      font-size: 15px;
-      color: #444;
+    .title span {
+      border-left: 1px solid #111;
+      border-right: 1px solid #111;
+      padding: 0 15px;
+      display: inline-block;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 26px;
+    }
+
+    /* 🔥 CAJAS PRO */
+    .box {
+      background: #e6f0ff;
+      border-left: 4px solid #0b57d0;
+      padding: 16px 18px;
+      margin-bottom: 14px;
+      font-size: 14px;
+    }
+
+    .box.large {
+      min-height: 110px;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 24px;
       text-decoration: none;
-      padding: 13px 22px;
+      padding: 11px 18px;
       border: 1px solid #111;
       color: #111;
       background: white;
       transition: 0.2s ease;
+      font-size: 14px;
+      margin-top: 8px;
     }
 
     .btn:hover {
@@ -132,9 +114,20 @@
       color: white;
     }
 
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 38px;
+    .info h3 {
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    .info p {
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -154,37 +147,24 @@
     </div>
   </nav>
 
-  <section class="hero">
-    <div class="hero-box">
-      <h1>Hola, soy<br>Santiago Chonate</h1>
+  <section class="section">
+    <h1 class="title"><span>@ Contact</span></h1>
 
-      <div class="hero-info">
-
-        <!-- UNIVERSIDAD -->
-        <div class="info-item">
-          <svg class="icon" viewBox="0 0 24 24" fill="#2563eb">
-            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 13L3.74 9 12 4.26 20.26 9 12 16zm-6 2v2h12v-2H6z"/>
-          </svg>
-          <div>
-            <p class="info-title">Administración de Empresas y Negocios Internacionales</p>
-            <p class="info-text">Estudiante del último año — Universidad Peruana Unión</p>
-          </div>
-        </div>
-
-        <!-- COMPUTACIÓN -->
-        <div class="info-item">
-          <svg class="icon" viewBox="0 0 24 24" fill="#059669">
-            <path d="M3 5h18v12H3V5zm2 2v8h14V7H5zm4 12h6v2H9v-2z"/>
-          </svg>
-          <div>
-            <p class="info-title">Computación e Informática</p>
-            <p class="info-text">Carrera culminada — Instituto de Educación Superior | Cepea</p>
-          </div>
-        </div>
-
+    <div class="contact-grid">
+      
+      <div>
+        <div class="box">Nombre completo: Santiago Chonate Gamero</div>
+        <div class="box">Correo: santiagochonate@upeu.edu.pe</div>
+        <div class="box large">Disponible para oportunidades en clínicas, hospitales y empresas.</div>
+        <a class="btn" href="https://wa.me/51929668062" target="_blank">Enviar mensaje</a>
       </div>
 
-      <a class="btn" href="contact.html">@ Contact</a>
+      <div class="info">
+        <h3>Contacto</h3>
+        <p>📞 +51 929 668 062</p>
+        <p>✉️ santiagochonate@upeu.edu.pe</p>
+        <p>📍 Perú</p>
+      </div>
 
     </div>
   </section>
